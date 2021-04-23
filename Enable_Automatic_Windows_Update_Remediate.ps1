@@ -2,7 +2,7 @@
 .SYNOPSIS
     Remediation script for a MEM Proactive Remediation.
 .DESCRIPTION
-    NoAutoUpdate registry DWORD should not be set to 1 
+    NoAutoUpdate registry DWORD should not be set to 1.
     0 or not exist is compliant.
 .NOTES
     FileName:   Enable_Automatic_Windows_Update_Remediate.ps1
@@ -10,14 +10,14 @@
     Author:     Mark Kerry
 #>
 
-$Path = "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU"
-$Name = "NoAutoUpdate"
-$Type = "DWORD"
-$Value = 0
+$regPath = "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU"
+$regName = "NoAutoUpdate"
+$regType = "DWORD"
+$regValue = 0
 
 try {
-    Set-ItemProperty -Path $Path -Name $Name -Type $Type -Value $Value -Force -ErrorAction Stop
+    Set-ItemProperty -Path $regPath -Name $regName -Type $regType -Value $regValue -Force -ErrorAction Stop
 }
 catch {
-    Write-Output "Failed to change the $Name to $Value"
+    Write-Output "Failed to change the $regName to $regValue"
 }

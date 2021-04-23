@@ -10,13 +10,13 @@
     Author:     Mark Kerry
 #>
 
-$Path = "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU"
-$Name = "NoAutoUpdate"
-$Value = 0
+$regPath = "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU"
+$regName = "NoAutoUpdate"
+$regValue = 0
 
 try {
-    $Registry = Get-ItemProperty -Path $Path -Name $Name -ErrorAction Stop | Select-Object -ExpandProperty $Name
-    if ($Registry -eq $Value){
+    $registry = Get-ItemProperty -Path $regPath -Name $regName -ErrorAction Stop | Select-Object -ExpandProperty $regName
+    if ($registry -eq $regValue){
         Write-Output "Compliant"
         exit 0
     }
@@ -26,6 +26,6 @@ try {
     }
 } 
 catch {
-    Write-Output "Compliant. $Name does not exist"
+    Write-Output "Compliant. $regName does not exist"
     exit 0
 }
