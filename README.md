@@ -11,14 +11,14 @@ Reports / Endpoint analytics / Proactive Remediations
 ## Proactive Remediations
 
 1. Enable Automatic Windows Update
-2. Restart_Stopped_Office_C2R_Service
-3. Update_Office_C2R
+2. Restart Stopped Office C2R Service
+3. Update Office C2R
 
 <br>
 
 ## 1. Enable Automatic Windows Update
 
-Whilst testing WUfB we encountered a number of devices holding onto a setting to disable automatic updates which had been applied to a legacy GPO.
+When moving to WUfB you may encounter a number of devices holding onto a setting to disable automatic updates which had been applied to a legacy GPO.
 
 This proactive remediation will enable automatic updates if they are disabled
 
@@ -32,7 +32,7 @@ Desired State:
 
 <br>
 
-## 2. Restart_Stopped_Office_C2R_Service
+## 2. Restart Stopped Office C2R Service
 
 This proactive remediation will check if the ClickToRunSvc service is running and if not, start it. It is based on the built-in proactive remediation by Microsoft, only with changes since I noticed the original is incorrectly coded. Here is an example of the incorrect code:
 
