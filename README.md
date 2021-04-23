@@ -2,7 +2,7 @@
 
 Endpoint Analytics Proactive Remediations - Detection and Remediations scripts
 
-Proactive Remediations are Intune's take on ConfigMgr's Configuration Item/Baseline. They are PowerShell script that consist of a detection and remediation script. The detection script evaluates the current state and only runs the remediation script if it does not match the desired state.
+Proactive Remediations are Intune's take on ConfigMgr's Configuration Item/Baseline. They are PowerShell scripts that consist of a detection and remediation script. The detection script evaluates the current state and only runs the remediation script if it does not match the desired state.
 
 You can access Proactive Remediations in the [Microsoft Endpoint Manager](https://endpoint.microsoft.com/) portal.
 
